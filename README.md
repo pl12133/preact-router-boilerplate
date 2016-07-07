@@ -4,6 +4,8 @@ A single page application created with [Preact](https://github.com/developit/pre
 
 Built with [Babel](https://github.com/babel/babel) and [Webpack](https://github.com/webpack/webpack).
 
+###### [Demo Available](https://pl12133.github.io/preact-router-boilerplate/)
+
 #### Features
 
   1. Easy development and easy production deployment.
