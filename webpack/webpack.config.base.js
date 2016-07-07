@@ -1,21 +1,31 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlPluginConfig = require('./pluginConfig/htmlPluginConfig');
 const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
+
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const isProduction = NODE_ENV === 'production';
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractedStylesFile = 'assets/css/styles.css';
-const ExtractSCSS = new ExtractTextPlugin(extractedStylesFile);
-
-const isProduction = process.env.NODE_ENV === 'production';
+const ExtractSCSS = new ExtractTextPlugin(extractedStylesFile, {
+  allChunks: true,
+  disable: !isProduction
+});
 
 // The base webpack configuration, shared in both development and production
 module.exports = {
   plugins: [
-    new HtmlWebpackPlugin(htmlPluginConfig)
-  ].concat(isProduction
-    ? [ ExtractSCSS ]
-    : []
-  ),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(NODE_ENV)
+      }
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new HtmlWebpackPlugin(htmlPluginConfig),
+    ExtractSCSS
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
     modulesDirectories: ['node_modules', 'src']
@@ -23,9 +33,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.scss$/,
-      loader: isProduction
-        ? ExtractSCSS.extract('style', 'css!postcss!sass')
-        : 'style!css!postcss!sass'
+      loader: ExtractSCSS.extract('style', 'css!postcss!sass')
     }, {
       test: /\.js(x?)$/,
       loader: 'babel',
