@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": [ "semistandard" ],
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/jsx-uses-vars": 2
+  }
+}

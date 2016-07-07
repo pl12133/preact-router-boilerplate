@@ -1,0 +1,12 @@
+/* Footer Styles */
+:local(.styles) {
+  footer {
+    display: table;
+    margin: 0 auto;
+
+    & > span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}

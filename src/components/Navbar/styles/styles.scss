@@ -1,0 +1,33 @@
+/* Navbar Styles */
+:local(.styles) {
+  display: table;
+  width: 100%;
+  background: linear-gradient(to bottom right, rgba(0,0,0,.5), rgba(0,0,128,.2));
+  border-radius: 0 0 50% 50%;
+  height: 10vh;
+
+  ol {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      &:not(:last-child):after {
+        content: ' / ';
+        margin: 0 10px 0 10px;
+      }
+
+      a {
+        color: white;
+
+        &:visited {
+          color: #c0c0c0;
+        }
+      }
+    }
+  }
+
+}

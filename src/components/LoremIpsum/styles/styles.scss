@@ -1,0 +1,9 @@
+/* LoremIpsum Styles */
+:local(.styles) {
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  p {
+    margin: 0 auto 15px auto;
+    width: 80%;
+  }
+}

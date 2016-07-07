@@ -1,0 +1,10 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    "es2015-minimal"
+  ],
+  "plugins": [
+    ["transform-object-rest-spread"],
+    ["transform-react-jsx", { "pragma": "h" }]
+  ]
+}

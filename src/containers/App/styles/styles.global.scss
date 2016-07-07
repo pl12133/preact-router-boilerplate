@@ -1,0 +1,57 @@
+/* Global Styles */
+
+:global {
+  * {
+    // The simplest CSS Reset
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  #root {
+    overflow: hidden;
+  }
+
+  body {
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/sunset-color-pallette.png');
+    background-size: cover;
+
+    /* Responsive font sizing */
+    @media (max-width: 1366px) {
+      font-size: 1.3em;
+    }
+    @media (max-width: 1024px) {
+      font-size: 1.2em;
+    }
+    @media (max-width: 767px) {
+      font-size: 1.15em;
+    }
+    @media (max-width: 468px) {
+      font-size: 1.075em;
+    }
+    @media (max-width: 326px) {
+      font-size: 1em;
+    }
+  }
+
+  // This single page application has a <nav> pinned to the top and a <footer>
+  // pinned to the bottom. The <main> tag is scrollable and contains all content
+  // loaded dynamically by `preact-router`.
+  nav {
+    height: 10vh;
+  }
+
+  main {
+    height: 85vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; // Allow <main> to smooth scroll on iOS
+  }
+   
+  footer {
+    height: 5vh;
+  }
+}
