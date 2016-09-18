@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
 import { h, render } from 'preact';
-/* eslint-enable no-unused-vars*/
+/* eslint-enable no-unused-vars */
 
 /* __START HERE__. This is your entry point!
  * We create a function to render the App in `preact`, and also use that

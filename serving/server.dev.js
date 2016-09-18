@@ -3,7 +3,7 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('../webpack/webpack.config.dev');
 
 var port = process.env.PORT || 8080;
-var host = process.env.HOST || 'localhost';
+var host = process.env.HOST || '0.0.0.0';
 
 start();
 

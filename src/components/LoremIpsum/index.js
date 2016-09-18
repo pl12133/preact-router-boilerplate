@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
 import { h } from 'preact';
-/* eslint-enable no-unused-vars*/
+/* eslint-enable no-unused-vars */
 
 // This component creates multiple lines of random Lorem Ipsum text. Using
 // dummy data from JSON files during development can help prototype faster

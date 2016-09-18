@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
 import { h } from 'preact';
-/* eslint-enable no-unused-vars*/
+/* eslint-enable no-unused-vars */
 
 // This is the default route for `preact-router`, when no other route matches.
 import styles from './styles/';

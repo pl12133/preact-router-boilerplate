@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
 import { h } from 'preact';
-/* eslint-enable no-unused-vars*/
+/* eslint-enable no-unused-vars */
 
 // `preact-router` has a <Link> component just like `react-router`
 // However `preact-router` will automatically try to handle <a> tags so

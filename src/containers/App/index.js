@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
 import { h } from 'preact';
-/* eslint-enable no-unused-vars*/
+/* eslint-enable no-unused-vars */
 
 // The entire App is a Navbar, the Main Content, and a Footer
 // The main content will change dynamically using <Routes> from `preact-router`

@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const baseWebpackConfig = require('./webpack.config.base');
-const host = process.env.HOST || 'localhost';
+const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || '8080';
 
 module.exports = Object.assign({}, baseWebpackConfig, {

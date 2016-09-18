@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
 import { h } from 'preact';
-/* eslint-enable no-unused-vars*/
+/* eslint-enable no-unused-vars */
 
 // `preact-router` has an API like `react-router`, with <Router> and <Route>
 import { Router, Route } from 'preact-router';
